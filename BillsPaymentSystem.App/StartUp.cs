@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace BillsPaymentSystem
+namespace BillsPaymentSystem.App
 {
-    class Program
+    class StartUp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }
