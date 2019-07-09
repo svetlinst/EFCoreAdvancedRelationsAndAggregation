@@ -16,6 +16,6 @@ namespace BillsPaymentSystem.Models
 
         public DateTime ExpirationDate { get; set; }
 
-
+        public PaymentMethod PaymentMethod { get; set; }
     }
 }

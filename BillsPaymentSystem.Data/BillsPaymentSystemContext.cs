@@ -28,6 +28,10 @@ namespace BillsPaymentSystem.Data
             modelBuilder.ApplyConfiguration(new UserConfig());
 
             modelBuilder.ApplyConfiguration(new BankAccountConfig());
+
+            modelBuilder.ApplyConfiguration(new CreditCardConfig());
+
+            modelBuilder.ApplyConfiguration(new PaymentMethodConfig());
         }
     }
 }
