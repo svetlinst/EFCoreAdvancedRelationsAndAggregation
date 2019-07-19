@@ -6,30 +6,27 @@ using System.Text;
 namespace BillsPaymentSystem.Data
 {
     [AttributeUsage(AttributeTargets.Property)]
-    public class XorAttribute:ValidationAttribute
+    public class XorAttribute : ValidationAttribute
     {
-        private string xorTargetAttribute;
+        private string targetProperty;
 
-        public XorAttribute(string xorTargetAttribute)
+        public XorAttribute(string targetProperty)
         {
-            this.xorTargetAttribute = xorTargetAttribute;
+            this.targetProperty = targetProperty;
         }
 
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             var targetAttribute = validationContext.ObjectType
-                .GetProperty(xorTargetAttribute)
+                .GetProperty(targetProperty)
                 .GetValue(validationContext.ObjectInstance);
 
-            if ((targetAttribute == null && value != null)||
-                (targetAttribute !=null && value==null))
+            if ((targetAttribute==null) ^ (value==null))
             {
                 return ValidationResult.Success;
             }
+            return new ValidationResult("The two properties must have opposite values!");
 
-            string errorMsg = "The two properties must have opposite values!";
-
-            return new ValidationResult(errorMsg);
         }
     }
 }

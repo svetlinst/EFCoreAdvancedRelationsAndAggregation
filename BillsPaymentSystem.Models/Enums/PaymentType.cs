@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BillsPaymentSystem.Models.Enums
 {
-    public enum Type
+    public enum PaymentType
     {
         BankAccount = 0,
         CreditCard = 1

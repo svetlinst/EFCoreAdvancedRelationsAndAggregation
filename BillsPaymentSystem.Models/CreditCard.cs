@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using BillsPaymentSystem.Models.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,6 +16,7 @@ namespace BillsPaymentSystem.Models
 
         public decimal LimitLeft { get; set; }
 
+        [ExpirationDate]
         public DateTime ExpirationDate { get; set; }
 
         public PaymentMethod PaymentMethod { get; set; }

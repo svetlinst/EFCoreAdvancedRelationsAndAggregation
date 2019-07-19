@@ -6,6 +6,6 @@ namespace BillsPaymentSystem.Data
 {
     public class Config
     {
-        public const string connectionString = @"Server=DESKTOP-8EE2DQ0\SQLEXPRESS;Database=BillsPaymentSystem;Trusted_Connection=True;";
+        public const string connectionString = @"Server=DESKTOP-1HM340D\SQLEXPRESS;Database=BillsPaymentSystem;Trusted_Connection=True;";
     }
 }
